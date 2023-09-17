@@ -8,6 +8,7 @@ import logging
 
 option_a = os.getenv('OPTION_A', "Cats")
 option_b = os.getenv('OPTION_B', "Dogs")
+redis_password = os.getenv('REDIS_PASSWORD', "DOG")
 hostname = socket.gethostname()
 
 app = Flask(__name__)
@@ -48,4 +49,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80, debug=True, threaded=True)
+    app.run(host='0.0.0.0', port=8080, debug=True, threaded=True)
